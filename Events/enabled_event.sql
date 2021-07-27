@@ -1,0 +1,15 @@
+﻿DELIMITER $$
+
+CREATE EVENT `enabled_event`
+	ON SCHEDULE EVERY '1' DAY
+	STARTS '2027-10-06 18:55:48'
+	DO 
+BEGIN
+END
+$$
+
+ALTER EVENT `enabled_event`
+	ENABLE
+$$
+
+DELIMITER ;

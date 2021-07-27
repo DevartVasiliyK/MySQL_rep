@@ -1,0 +1,20 @@
+﻿CREATE TABLE `table_fk` (
+  `pk` INT NOT NULL,
+  `fk` INT DEFAULT NULL,
+  `txt` VARCHAR(255) DEFAULT NULL,
+  `c1` INT DEFAULT NULL,
+  PRIMARY KEY (pk)
+)
+ENGINE = INNODB,
+CHARACTER SET latin1,
+COLLATE utf8mb4_0900_ai_ci;
+
+ALTER TABLE `table_fk` 
+  ADD CONSTRAINT `check_c1` CHECK (`c1` < 35);
+
+ALTER TABLE `table_fk` 
+  ADD UNIQUE INDEX UK_table_FK_txt(txt);
+
+ALTER TABLE `table_fk` 
+  ADD CONSTRAINT `FK_table_FK_fk` FOREIGN KEY (fk)
+    REFERENCES table_pk(id) ON UPDATE CASCADE;

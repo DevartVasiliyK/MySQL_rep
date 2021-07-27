@@ -1,0 +1,7 @@
+﻿CREATE TABLE `table2` (
+  `column1` VARCHAR(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (column1)
+)
+ENGINE = INNODB,
+CHARACTER SET latin1,
+COLLATE utf8mb4_0900_ai_ci;
