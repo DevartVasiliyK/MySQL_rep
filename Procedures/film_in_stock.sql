@@ -1,6 +1,6 @@
 ﻿DELIMITER $$
 
-CREATE PROCEDURE `film_in_stock`(IN p_film_id INT, IN p_store_id INT, OUT p_film_count INT)
+CREATE PROCEDURE `film_in_stock`(IN p_film_id INT, OUT p_film_count INT)
   READS SQL DATA
 BEGIN
      SELECT inventory_id
